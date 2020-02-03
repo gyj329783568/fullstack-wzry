@@ -63,6 +63,7 @@ module.exports = app => {
 
 
   app.post('/admin/api/login', async(req, res) => {
+    console.log('hh')
     const { username, password } = req.body
     // 1. 根据用户名找用户
     const user = await AdminUser.findOne({username}).select('+password')

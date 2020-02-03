@@ -8,4 +8,8 @@ module.exports = app => {
   }).catch(error => {
     //console.log(error)
   })
+  // 引入某文件夹下的所有
+  require('require-all')(__dirname + '/../models')
+
+
 }
